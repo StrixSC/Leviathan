@@ -1,3 +1,29 @@
-.custom {
-    background: black !important;
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.main-navbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 100px;
+    font-family: 'Bungee Hairline', Arial;
+    font-size: 36px;;
+}
+
+.navbar-item {
+    color: white;
+}
+
+.logo {
+    width: 100px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
