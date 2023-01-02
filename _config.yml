@@ -1,2 +1,9 @@
 favicon: assets/favicon.ico
 logo: assets/logo.png
+
+# navbar
+
+github_url: https://github.com/StrixSC/
+mastodon_url: https://mastodon.social/explore
+linkedin_url: https://linkedin.com
+twitter_url: https://twitter.com/S7RIX
