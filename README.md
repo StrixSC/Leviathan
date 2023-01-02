@@ -1,2 +1,2 @@
 # Leviathan
-Single columned and stylish dark Hexo theme
+Modern, stylish and dark Hexo theme
