@@ -5,7 +5,15 @@
 
 <body>
     <div class="main-container">
-        <%- partial('_partials/nav'); %>
+        <div class="nav-wrapper">
+            <%- partial('_partials/nav'); %>
+        </div>
+        <div class="main-body-wrapper">
+            <%- body %>
+        </div>
+        <div class="footer-wrapper">
+            <%- partial('_partials/footer'); %>
+        </div>
     </div>
 </body>
 </html>
