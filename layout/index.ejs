@@ -1,6 +1,5 @@
 <div class="main-landing-page-container">    
-    <a href="<%- url_for('archives')%>" class="landing-page-list-item uppercased clickable"> BLOG </a>
-    <a href="<%- url_for('projects')%>" class="landing-page-list-item uppercased clickable"> PROJECTS </a>
-    <a href="<%- url_for('resume')%>" class="landing-page-list-item uppercased clickable"> RESUME </a>
-    <a href="<%- url_for('links')%>" class="landing-page-list-item uppercased clickable"> LINKS </a>
+    <% for(var i in theme.menu){%>
+        <a href="<%- url_for(theme.menu[i]) %>" class="landing-page-list-item uppercased clickable"> <%= i %> </a>
+    <%}%> 
 </div>
