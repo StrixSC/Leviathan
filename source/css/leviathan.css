@@ -8,6 +8,10 @@
     text-transform: uppercase;
 }
 
+.underlined {
+    text-decoration: underline;
+}
+
 /* Layout */
 
 body {
@@ -65,6 +69,10 @@ body {
 
     /* Footer */
 
+    .main-footer-wrapper {
+
+    }
+
 
 
 /* Index */
@@ -74,18 +82,15 @@ body {
 }
 
 .main-landing-page-container {
-    color: white;
     font-family: 'Bungee Hairline', Arial;
     font-size: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .landing-page-list-item {
-    display: inline-block;
     text-decoration: none;
     color: white;
 }
@@ -95,3 +100,18 @@ body {
 }
 
 
+
+/* Footer */
+
+.main-footer-container {
+    margin: 2rem 0rem;
+    color: white;
+    font-family: 'Bungee Hairline', Arial;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer-link-element {
+    color: white;
+    text-decoration: none;
+}
