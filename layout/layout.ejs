@@ -6,7 +6,11 @@
 <body>
     <div class="main-container">
         <div class="nav-wrapper">
+            <% if(is_home()) {%>
+            <%- partial('_partials/index_nav'); %>
+            <%} else {%>
             <%- partial('_partials/nav'); %>
+            <%}%>
         </div>
         <div class="main-body-wrapper">
             <%- body %>

@@ -28,50 +28,20 @@ body {
     gap: 2rem;
 }
 
-    /* Navbar */
-    .main-navbar-container {
-        display: flex;
-        justify-content: center;
-        gap: 7.5rem;
-        align-items: center;
-        padding-top: 5rem;
-        font-family: 'Bungee Hairline', Arial;
-        font-size: 36px;;
-    }
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
-    .navbar-item {
-        color: white;
-    }
+.main-body-wrapper {
 
-    .nav-icon-link {
-        opacity: 0.25;
-    }
+}
 
-    .nav-icon-link:hover {
-        opacity: 0.75;
-    }
+.main-footer-wrapper {
 
-    .logo {
-        width: 100px;
-    }
-
-    .navbar-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    /* Body */
-    .main-body-wrapper {
-
-    }
-
-    /* Footer */
-
-    .main-footer-wrapper {
-
-    }
+}
 
 
 
@@ -99,8 +69,6 @@ body {
     font-weight: bold;
 }
 
-
-
 /* Footer */
 
 .main-footer-container {
@@ -115,3 +83,79 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/* Index Navbar */
+
+.main-navbar-container {
+    display: flex;
+    justify-content: center;
+    gap: 7.5rem;
+    align-items: center;
+    padding-top: 5rem;
+    font-family: 'Bungee Hairline', Arial;
+    font-size: 36px;;
+}
+
+.navbar-item {
+    color: white;
+}
+
+.nav-icon-link {
+    opacity: 0.25;
+}
+
+.nav-icon-link:hover {
+    opacity: 0.75;
+}
+
+.logo {
+    width: 100px;
+}
+
+
+/* Light Nav */
+
+.main-lightnav-container {
+    color: white;
+    font-family: 'Bungee Hairline', 'Arial';
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.lightnav-title {
+    font-weight: normal;
+    text-align: center;
+}
+
+.lightnav-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightnav-logo {
+    width: 50px;
+}
+
+/* Archives */
+.main-archives-container {
+    color: white;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .lightnav-title,
+    .lightnav-logo-container {
+        width: 100%;
+    }
+}
+
+/* @media only screen and (min-width:  480px) {} */
+/* @media only screen and (max-width:  1024px) {} */
+/* @media only screen and (max-width:  1200px) {} */
+
