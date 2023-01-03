@@ -1,31 +1,33 @@
 <div class="main-archives-container">
-    <% 
-        const res=filterPostsByYear(site.posts);
-        const sitePosts=res[0]; 
-        const archivePosts=res[1]; 
+    <% const res=filterPostsByYear(site.posts); 
+    const sitePosts=res[0]; 
+    const archivePosts=res[1]; 
+    let keys=Object.keys(archivePosts).sort((a, b)=> {
+        return theme.sort_descending ? (b - a) : (a - b)
+    });
     %>
         <div class="archive-post-container">
 
         </div>
         <div class="main-archive-list-container">
-
-            <% for(const year of Object.keys(archivePosts)) { %>
+                <% for(const year of keys) { %>
                 <h3 class="archive-list-year">
                     <%=year%>
                 </h3>
                 <div class="archive-list-yearly-content-container">
                     <% archivePosts[year].forEach((post)=> { %>
                         <div class="archive-list-yearly-content-item">
-                            <div class="archive-list-yearly-content-item-date" 
-                                <% if(theme.accent_color) {%>
-                                    style="color: #<%=theme.accent_color%>"
-                                <%}%>
-                            >
-                                <%- full_date(post.date, "MMM DD, YYYY" )%>
+                            <div class="archive-list-yearly-content-item-date" <% if(theme.accent_color) {%>
+                                style="color: #<%=theme.accent_color%>"
+                                    <%}%>
+                                        >
+                                        <%- full_date(post.date, "MMM DD, YYYY" )%>
                             </div>
 
                             <div class="archive-list-yearly-content-item-title">
-                                <a href="<%- url_for(post.path) %>" class="clickable archive-list-post-url"><%=truncate(post.title)%></a>
+                                <a href="<%- url_for(post.path) %>" class="clickable archive-list-post-url">
+                                    <%=truncate(post.title)%>
+                                </a>
                             </div>
                         </div>
                         <%})%>

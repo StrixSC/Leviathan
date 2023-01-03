@@ -9,6 +9,10 @@ twitter_url: https://twitter.com/S7RIX
 
 accent_color: B0D9FF
 
+
+# Archive:
+sort_descending: true # Will sort blogposts in archive list starting with newest one
+
 # index menu
 # Example:
 menu:
