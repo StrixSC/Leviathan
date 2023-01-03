@@ -147,6 +147,53 @@ body {
     color: white;
 }
 
+.main-archive-list-container {
+    order: 2;
+}
+
+.archive-list-year {
+    font-family: 'Bungee Hairline';
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.archive-list-yearly-content-container {
+    padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.archive-list-yearly-content-item {
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+    gap: 3rem;
+    width: 100%;
+}
+
+.archive-list-yearly-content-item-date {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', 'Source Code Pro';
+}
+
+.archive-list-yearly-content-item-title {
+    font-size: 24px;
+    font-weight: lighter;
+    font-family: 'Source Sans Pro', 'Source Code Pro';
+}
+
+.archive-list-post-url {
+    text-decoration: none;
+    color: white;
+}
+
+.archive-list-post-url:hover {
+    text-decoration: underline;
+}
+
+
 
 @media only screen and (max-width: 1024px) {
     .lightnav-title,
