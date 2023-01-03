@@ -1,1 +1,7 @@
-<h1>This is a post</h1>
+<div class="main-page-container">
+    <h1 class="page-title"> <%= page.title %> </h1>
+    <div class="page-date"> <%-full_date(page.date, "MMM DD, YYYY")%></div>
+    <div class="page-content">
+        <%-page.content%>
+    </div>
+</div>
