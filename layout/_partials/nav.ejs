@@ -1,11 +1,11 @@
-<a alt="Home" href="<%- url_for('') %>" class="main-lightnav-container">
-    <% const def="A Blog Powered By Hexo" ; %>
+<a alt="Home" href="<%- url_for('') %>" class="text-white font-bungeehairline flex align-middle justify-center gap-4 flex-wrap no-underline">
+    <% const def="A Blog Powered By Hexo" ;%>
     <% if (theme.logo) {%>
-        <div class="lightnav-logo-container">
-            <img class="lightnav-logo" src="<%- url_for(theme.logo)%>" alt="logo">
+        <div class="flex align-middle justify-center">
+            <img class="w-12" src="<%- url_for(theme.logo)%>" alt="logo">
         </div>
     <%}%>
-    <h2 class="lightnav-title uppercased">
+    <h2 class="uppercased">
         <%=config.title ? config.title : def %> 
         <% if(config.subtitle) {%>
             <span>

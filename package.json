@@ -7,12 +7,22 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "postinstall": "cp ./package.json ./themes/leviathan/package.json"
+    "build:gulp": "gulp",
+    "dev": "gulp watch"
   },
   "hexo": {
     "version": "6.3.0"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "autoprefixer": "^10.4.13",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-purgecss": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify-es": "^3.0.0",
     "hexo": "^6.3.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
@@ -24,7 +34,11 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
-    "hexo-util": "^3.0.1"
+    "hexo-util": "^3.0.1",
+    "postcss": "^8.4.20",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.0",
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {}
 }

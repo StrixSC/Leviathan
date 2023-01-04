@@ -1,28 +1,16 @@
-<div class="main-navbar-container">
-    <!-- TODO: Add configuration on the type of navbar the user wants. -->
-    <!-- <div class="left-navbar-container navbar-container"> -->
-    
-    <div class="navbar-item nav-icon-link clickable">
-        <a href="<%=theme.mastodon_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/mastodon/white" /></a>
-    </div>
-    <div class="navbar-item nav-icon-link clickable">
-        <a href="<%=theme.linkedin_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/linkedin/white" /></a>
-    </div>
-    <!-- </div> -->
-    <!-- <div class="middle-navbar-container navbar-container "> -->
+<div class="flex flex-col justify-center gap-4 font-bungeehairline text-xl">
     <% if (theme.logo) {%>
-        <div class="navbar-item logo-container">
-            <a href="<%- url_for('') %>"><img class="logo" src="<%=url_for(theme.logo)%>"></a>
+        <div class="flex justify-center align-middle">
+            <a href="<%- url_for('') %>"><img class="w-24" src="<%=url_for(theme.logo)%>"></a>
         </div>
     <%}%>
-    <!-- </div> -->
+    <div class="text-3xl text-center text-white">
+        <%=config.title ? config.title : def %> 
+        <% if(config.subtitle) {%>
+            <span>
+                | <%=config.subtitle%>
+            </span>
+        <%}%>
+    </div>
 
-    <!-- <div class="right-navbar-container navbar-container "> -->
-    <div class="navbar-item nav-icon-link clickable">
-        <a href="<%=theme.twitter_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/twitter/white" /></a>
-    </div>
-    <div class="navbar-item nav-icon-link clickable">
-        <a href="<%=theme.github_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/github/white" /></a>
-    </div>
-    <!-- </div> -->
 </div>

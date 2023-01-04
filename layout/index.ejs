@@ -1,5 +1,5 @@
-<div class="main-landing-page-container">    
-    <% for(var i in theme.menu){%>
-        <a href="<%- url_for(theme.menu[i]) %>" class="landing-page-list-item uppercased clickable"> <%= i %> </a>
-    <%}%> 
+<div class="font-bungeehairline text-4xl flex justify-center items-center flex-col gap-4">    
+        <% for(var i in theme.menu){%>
+            <a href="<%- url_for(theme.menu[i]) %>" class="hover:cursor-pointer no-underline text-white hover:font-bold hoverable-element"> <%= i %> </a>
+            <%}%> 
 </div>

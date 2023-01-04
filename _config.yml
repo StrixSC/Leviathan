@@ -21,3 +21,11 @@ menu:
   Resume: /resume
   Links: /links
   
+stylus:
+  compress: false
+  sourcemaps:
+    comment: true
+    inline: true
+    sourceRoot: ''
+    basePath: .
+  plugins: 'nib'

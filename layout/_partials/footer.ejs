@@ -1,8 +1,27 @@
-<footer class="main-footer-container">
+<footer class="mx-8 text-white font-bungeehairline text-xl text-center">
     <div class="copyright">
         &copy; <%= new Date().getFullYear() %> | Powered by <a class="footer-link-element underlined" href="https://hexo.io" target="_blank"><b>Hexo</b></a>
     </div>
-   Theme LEVIATHAN by <a class="footer-link-element" href="https://github.com/StrixSC"><b>StrixSC</b></a>
+   <div>Theme LEVIATHAN by <a class="footer-link-element" href="https://github.com/StrixSC"><b>StrixSC</b></a></div>
+
+   <br>
+
+   <div class="flex justify-center align-middle gap-4 flex-wrap">
+    <div class="hoverable-element">
+        <a href="<%=theme.mastodon_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/mastodon/white" /></a>
+    </div>
+    <div class="hoverable-element">
+        <a href="<%=theme.linkedin_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/linkedin/white" /></a>
+    </div>
+    <!-- <div class="right-navbar-container navbar-container "> -->
+    <div class="hoverable-element">
+        <a href="<%=theme.twitter_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/twitter/white" /></a>
+    </div>
+    <div class="hoverable-element">
+        <a href="<%=theme.github_url%>"><img height="32" width="32" src="https://cdn.simpleicons.org/github/white" /></a>
+    </div>
+   </div>
+
 </footer>
 
 <%- js('js/main') %>
