@@ -2,10 +2,10 @@
     <% const def="A Blog Powered By Hexo" ;%>
     <% if (theme.logo) {%>
         <div class="flex align-middle justify-center">
-            <img class="w-12" src="<%- url_for(theme.logo)%>" alt="logo">
+            <img class="w-16" src="<%- url_for(theme.logo)%>" alt="logo">
         </div>
     <%}%>
-    <h2 class="uppercased">
+    <h2 class="uppercase text-3xl">
         <%=config.title ? config.title : def %> 
         <% if(config.subtitle) {%>
             <span>

@@ -5,7 +5,6 @@ const cleanCSS = require('gulp-clean-css');
 
 gulp.task('css', () => gulp
   .src('stylesheets/**/*.css')
-// eslint-disable-next-line global-require,import/no-unresolved
   .pipe(
     postcss([
       require('postcss-import'),

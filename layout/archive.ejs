@@ -1,4 +1,4 @@
-<div class="text-white mb-12 gap-20 flex justify-center align-middle">
+<div class="text-white mb-12 flex justify-center items-center">
     <% const res=filterPostsByYear(site.posts); 
     const sitePosts=res[0]; 
     const archivePosts=res[1]; 
@@ -6,29 +6,27 @@
         return theme.sort_descending ? (b - a) : (a - b)
     });
     %>
-        <div class="border-l-2 border-solid border-white pl-8">
-                <% for(const year of keys) { %>
-                <div class="font-bungeehairline font-normal text-2xl">
-                    <%=year%>
-                </div>
-                <div class="flex flex-col align-middle gap-2 font-sourcecode pl-10">
-                    <% archivePosts[year].forEach((post)=> { %>
-                        <div class="flex gap-12 w-full">
-                            <div class="text-lg" <% if(theme.accent_color) {%>
-                                style="color: #<%=theme.accent_color%>"
-                                    <%}%>
-                                        >
-                                        <%- full_date(post.date, "MMM DD, YYYY" )%>
-                            </div>
+    <div class="border-l-2 border-solid border-white pl-8">
+        <% for(const year of keys) { %>
+        <div class="font-bungeehairline font-normal text-2xl pb-4">
+            <%=year%>
 
-                            <div class="text-lg font-sourcecode">
-                                <a href="<%- url_for(post.path) %>" class="text-white cursor-pointer hover:underline">
-                                    <%=truncate(post.title)%>
-                                </a>
-                            </div>
+            <div class="flex flex-col align-middle gap-2 font-sourcecode pl-10 gap-2">
+                <% archivePosts[year].forEach((post)=> { %>
+                <div class="flex gap-12 w-full">
+                    <div class="text-lg" <% if(theme.accent_color) {%> style="color: #<%=theme.accent_color%>" <%}%>
+                                        >
+                                        <%- full_date(post.date, "MMM DD, YYYY" )%> </div>
+
+                        <div class="text-lg font-sourcecode">
+                            <a href="<%- url_for(post.path) %>" class="text-white hoverable-element">
+                                <%=truncate(post.title)%>
+                            </a>
                         </div>
-                        <%})%>
+                    </div>
+                    <%})%>
                 </div>
-                <% }%>
+            </div>
+            <% }%>
         </div>
-</div>
+    </div>
