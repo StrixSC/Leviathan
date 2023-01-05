@@ -1,20 +1,20 @@
-<div class="flex w-full justify-center">
-    <div class="w-3/4 flex flex-col gap-4">
-        <div class="flex gap-8 flex-col">
+<div class="flex justify-center w-full">
+    <div class="flex flex-col w-11/12 gap-4 lg:w-1/2 md:w-3/4">
+        <div class="flex flex-col gap-8">
             <div class="flex flex-col gap-2">
-                <h1 class="text-white text-7xl"> <%= page.title %> </h1>
+                <h1 class="font-bold text-white text-7xl"> <%= page.title %> </h1>
                 <div class="text-white opacity-75"> <%-full_date(page.date, "MMM DD, YYYY")%></div>
             </div>
 
-            <div class="lg:hidden block">
+            <div class="block lg:hidden">
                 <%- partial ("_partials/toc") %>
             </div>
         </div>
-        <div class="content flex flex-col gap-4">
+        <div class="flex flex-col gap-4 content">
             <%-page.content%>
         </div>
     </div>
-    <div class="lg:block w-1/6 hidden">
+    <!-- <div class="hidden w-1/6 lg:block">
         <%- partial("_partials/toc"); %>
-    </div>
+    </div> -->
 </div>
