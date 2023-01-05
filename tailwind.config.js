@@ -1,5 +1,4 @@
-const { colors } = require('tailwindcss/defaultTheme');
-const lineClamp = require('@tailwindcss/line-clamp');
+const typography = require('@tailwindcss/typography');
 
 
 module.exports = {
@@ -9,12 +8,7 @@ module.exports = {
       'sourcecode': ['Source Code Pro'], 
     }
   },
-  extend: {
-    lineClamp: {
-      4: '4',
-    },
-  },
-  plugins: [lineClamp],
+  plugins: [typography],
   corePlugins: {
     textTransform: false,
     rotate: false,

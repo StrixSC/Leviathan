@@ -1,11 +1,11 @@
-<a alt="Home" href="<%- url_for('') %>" class="text-white font-bungeehairline flex align-middle justify-center gap-4 flex-wrap no-underline">
+<a alt="Home" href="<%- url_for('') %>" class="flex flex-wrap justify-center gap-4 text-white no-underline align-middle font-bungeehairline">
     <% const def="A Blog Powered By Hexo" ;%>
     <% if (theme.logo) {%>
-        <div class="flex align-middle justify-center">
+        <div class="flex justify-center align-middle">
             <img class="w-16" src="<%- url_for(theme.logo)%>" alt="logo">
         </div>
     <%}%>
-    <h2 class="uppercase text-3xl">
+    <h2 class="text-3xl text-center uppercase">
         <%=config.title ? config.title : def %> 
         <% if(config.subtitle) {%>
             <span>

@@ -6,12 +6,8 @@
 
 
 @layer base {
-    html {
-        /* font-family: 'Source Sans Pro'; */
-    }
-
     body {
-        @apply m-0 p-0 bg-black;
+        @apply p-0 m-0 bg-black;
         --codeblock_border_color: #252a30;
         --codeblock_bg_color: #0d1117;
         --string: #a5d6ff;
@@ -36,75 +32,26 @@
         border-color: white
     }
 
-    /* ... */
-
     .content {
-
-        color: white;
-
-        @apply leading-relaxed;
-
-        h1 {
-            @apply text-3xl my-4 pb-1 border-b border-gray-200;
-        }
-
-        h2 {
-            @apply text-2xl;
-        }
-
-        h3 {
-            @apply text-xl;
-        }
-
-        h4 {
-            @apply text-lg;
-        }
-
-        h5 {
-            @apply text-base;
-        }
-
-        h6 {
-            @apply text-sm;
-        }
-
-        ul,
-        ol {
-            @apply ml-4;
-        }
-
-        ul {
-            @apply list-disc mb-3;
-        }
-
-        ol {
-            @apply list-decimal mb-3;
-        }
-
-        /* p:has(> img) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            vertical-align: middle;
-            padding: 1rem;
-        } */
 
         p:has(code) {
             code {
-                background-color: var(--codeblock_bg_color);
                 border: 1px solid var(--codeblock_border_color);
                 border-radius: 2px;
                 padding: 0px 3px;
                 color: var(--keyword)
             }
+            code::after, code::before {
+                content: "" !important;
+            }
         }
 
-        .highlight table {
-            position: relative;
-            border: none;
+        figure {
             width: 100%;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+        }
+        
+        .highlight table {
             display: block;
             overflow: auto;
             scrollbar-width: thin;
@@ -125,21 +72,12 @@
         }
 
         .highlight table {
-            padding: 1rem;
+            padding: 0rem 1rem;
             border: 1px solid var(--codeblock_border_color);
             border-radius: 5px;
-            background: var(--codeblock_bg_color)
-
         }
-
-        .highlight table>tbody>tr {
-            display: flex;
-            gap: 1rem;
-        }
-
 
         .code {
-            
             .attr, .attribute, .literal, .meta, .number, .operator, .selector-attr, .selector-class, .selector-id, .variable {
                 color: #79c0ff;
             }
@@ -172,5 +110,6 @@
                 color: var(--built_in);
             }
         }
+        
     }
 }
