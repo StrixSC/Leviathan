@@ -1,3 +1,10 @@
-<% for(var i in theme.menu){%>
-    <a href="<%- url_for(theme.menu[i]) %>" class="text-white no-underline hover:cursor-pointer hover:font-extrabold hoverable-element"> <%= i %> </a>
-<%}%> 
+<div class="flex justify-center px-4">
+    <div class="flex flex-col w-full gap-6 lg:w-3/4 ">
+        <% for(var i in theme.menu){%>
+            <a href="<%- url_for(theme.menu[i]) %>"
+                class="pb-2 text-3xl font-bold text-white no-underline border-b-2 border-gray-400 hover:border-white hover:cursor-pointer">
+                <%= i %>
+            </a>
+            <%}%>
+        </div>
+</div>

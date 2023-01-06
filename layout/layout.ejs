@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- partial('_partials/head'); %>aa
+<%- partial('_partials/head'); %>
 
 <body>
-    <div class="flex flex-col min-h-screen gap-16 px-4 py-8 ">
-        <nav class="mb-auto nav-wrapper">
-            <% if(is_home()) {%>
-                <%- partial('_partials/index_nav'); %>
-                    <%} else {%>
-                        <%- partial('_partials/nav'); %>
-                            <%}%>
+
+    <div class="flex flex-col min-h-screen gap-12 px-4 py-8 layout ">
+        <nav class="nav-wrapper">
+           <%- partial('_partials/index_nav'); %>
         </nav>
-        <container class="">
+        <div class="hidden sidebar">
+            <%- partial('_partials/menu') %>
+        </div>
+        <script>
+            let open = false;
+            $('.menu').click((e) => {
+                open = !open;
+                console.log(open);
+                $('.tham').toggleClass('tham-active');
+                $('.sidebar').toggleClass('hidden');
+                $('.main-content-body').toggleClass('hidden');
+                $('.footer-wrapper').toggleClass('hidden');
+            });
+        </script>
+        <container class="main-content-body">
             <%- body %>
         </container>
         <footer class="mt-auto footer-wrapper ">

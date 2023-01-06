@@ -3628,6 +3628,11 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
+tailwind-hamburgers@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tailwind-hamburgers/-/tailwind-hamburgers-1.2.2.tgz#453c7cd8231d8bd7e9919e2283ce8c78e4a73db2"
+  integrity sha512-+waFl5H32B7YBOZZADalyxWYFq5qKg2dsqAyqTyMSlwbYFuwD1jhbtw8wSSAK+kU5HpnEhQJV4/V2Gl5cdop4g==
+
 tailwindcss@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.2.4.tgz#afe3477e7a19f3ceafb48e4b083e292ce0dc0250"

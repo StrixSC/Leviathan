@@ -1,5 +1,5 @@
 const typography = require('@tailwindcss/typography');
-
+const tham = require('tailwind-hamburgers');
 
 module.exports = {
   theme: {
@@ -8,7 +8,16 @@ module.exports = {
       'sourcecode': ['Source Code Pro'], 
     }
   },
-  plugins: [typography],
+  typography: () =>  ({
+    dark: {
+        css: {
+          pre: {
+            backgroundColor: "var(--codeblock_bg_color)",
+          }
+        }
+      }
+  }),
+  plugins: [typography, tham],
   corePlugins: {
     textTransform: false,
     rotate: false,

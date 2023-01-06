@@ -7,7 +7,7 @@
 
 @layer base {
     body {
-        @apply p-0 m-0 bg-black;
+        
         --codeblock_border_color: #252a30;
         --codeblock_bg_color: #0d1117;
         --string: #a5d6ff;
@@ -20,7 +20,11 @@
         --built_in: #ffa657;
         --variable: #79c0ff;
         --meta: #79c0ff;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
     }
+    
 }
 
 @layer components {
@@ -30,6 +34,11 @@
 
     .hoverable-element:hover {
         @apply border-white font-extrabold
+    }
+
+    
+    .uppercase {
+        text-transform: uppercase;   
     }
 
     .content {
