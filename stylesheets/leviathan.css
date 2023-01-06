@@ -7,7 +7,6 @@
 
 @layer base {
     body {
-        
         --codeblock_border_color: #252a30;
         --codeblock_bg_color: #0d1117;
         --string: #a5d6ff;
@@ -29,11 +28,11 @@
 
 @layer components {
     .hoverable-element {
-        @apply cursor-pointer border-b-4 border-transparent pb-2 border-solid font-normal
+        @apply cursor-pointer no-underline
     }
 
     .hoverable-element:hover {
-        @apply border-white font-extrabold
+        @apply underline
     }
 
     

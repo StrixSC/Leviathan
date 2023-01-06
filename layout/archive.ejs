@@ -1,4 +1,4 @@
-<div class="text-white mb-12 flex justify-center items-center">
+<div class="flex justify-center w-full mb-12 text-white lg:w-7/8">
     <% const res=filterPostsByYear(site.posts); 
     const sitePosts=res[0]; 
     const archivePosts=res[1]; 
@@ -8,21 +8,19 @@
     %>
     <div class="border-l-[1px] border-solid border-white pl-8">
         <% for(const year of keys) { %>
-        <div class="font-bungeehairline font-normal text-2xl pb-4">
-            <%=year%>
+        <div class="pb-4 font-normal">
+            <p class="pb-4 text-3xl font-semibold "><%=year%></p>
 
-            <div class="flex flex-col align-middle gap-2 font-sourcecode pl-10 gap-2">
+            <div class="flex flex-col gap-2 pl-10 align-middle">
                 <% archivePosts[year].forEach((post)=> { %>
-                <div class="flex gap-12 w-full">
-                    <div class="text-lg" <% if(theme.accent_color) {%> style="color: #<%=theme.accent_color%>" <%}%>
+                <div class="flex flex-wrap w-full text-xl">
+                    <div class="pb-2 pr-8" <% if(theme.accent_color) {%> style="color: #<%=theme.accent_color%>" <%}%>
                                         >
                                         <%- full_date(post.date, "MMM DD, YYYY" )%> </div>
 
-                        <div class="text-lg font-sourcecode">
-                            <a href="<%- url_for(post.path) %>" class="text-white hoverable-element">
-                                <%=truncate(post.title)%>
-                            </a>
-                        </div>
+                        <a href="<%- url_for(post.path) %>" class="text-white hoverable-element">
+                            <p class="block"><%=post.title%></p>
+                        </a>
                     </div>
                     <%})%>
                 </div>
