@@ -4,18 +4,18 @@
 <%- partial('_partials/head'); %>
 
 <body>
-    <div class="flex flex-col justify-center gap-16 px-4 py-8 align-midle">
-        <nav class="nav-wrapper">
+    <div class="flex flex-col justify-center min-h-screen gap-16 px-4 py-8 align-midle">
+        <nav class="mb-auto nav-wrapper">
             <% if(is_home()) {%>
                 <%- partial('_partials/index_nav'); %>
                     <%} else {%>
                         <%- partial('_partials/nav'); %>
                             <%}%>
         </nav>
-        <container>
+        <container class="">
             <%- body %>
         </container>
-        <footer class="footer-wrapper">
+        <footer class="mt-auto footer-wrapper ">
             <%- partial('_partials/footer'); %>
             <%- partial('_partials/post-footer'); %>
         </footer>
