@@ -25,11 +25,11 @@
 
 @layer components {
     .hoverable-element {
-        @apply cursor-pointer border-b-4 border-transparent pb-2 border-solid
+        @apply cursor-pointer border-b-4 border-transparent pb-2 border-solid font-normal
     }
 
     .hoverable-element:hover {
-        border-color: white
+        @apply border-white font-extrabold
     }
 
     .content {
@@ -39,7 +39,7 @@
                 border: 1px solid var(--codeblock_border_color);
                 border-radius: 2px;
                 padding: 0px 3px;
-                color: var(--keyword)
+                color: var(--keyword);
             }
             code::after, code::before {
                 content: "" !important;
@@ -49,9 +49,15 @@
         figure {
             width: 100%;
             margin: 0px;
+
+            .gutter > pre,
+            .code > pre {
+                background-color: var(--codeblock_bg_color);    
+            }
         }
         
         .highlight table {
+            background-color: var(--codeblock_bg_color);
             display: block;
             overflow: auto;
             scrollbar-width: thin;
@@ -77,7 +83,12 @@
             border-radius: 5px;
         }
 
+
         .code {
+
+            width: 100%; 
+
+
             .attr, .attribute, .literal, .meta, .number, .operator, .selector-attr, .selector-class, .selector-id, .variable {
                 color: #79c0ff;
             }
