@@ -45,6 +45,7 @@
         p:has(code) {
             code {
                 border: 1px solid var(--codeblock_border_color);
+                background-color: var(--codeblock_bg_color);
                 border-radius: 2px;
                 padding: 0px 3px;
                 color: var(--keyword);
