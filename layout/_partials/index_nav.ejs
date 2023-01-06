@@ -29,7 +29,7 @@
                             <% const def="A Blog Powered By Hexo" ;%>
                                 <% if (theme.logo) {%>
                                     <div class="flex justify-center align-middle">
-                                        <img class="w-16" src="<%- url_for(theme.logo)%>" alt="logo">
+                                        <a href="<%- url_for('') %>"><img class="w-16" src="<%- url_for(theme.logo)%>" alt="logo"></a>
                                     </div>
                                     <%} else {%>
                                         <h2 class="hidden text-3xl text-center lg:block">
