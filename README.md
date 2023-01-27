@@ -3,7 +3,7 @@
 ### Modern, stylish, minimalistic Hexo theme
 
 <div align="center">
-    <img style="width: 250px" src="./source/assets/logo.png">
+    <img width="15%" align="right" src="./source/assets/logo.png">
 </div>
 
 <hr>
