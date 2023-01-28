@@ -17,10 +17,7 @@ sort_descending: true # Will sort blogposts in archive list starting with newest
 # Example:
 menu:
   Home: /
-  Blog: /archives
-  Projects: /projects
-  Resume: /resume
-  Links: /links
+  Archive: /archives
  
   
 stylus:

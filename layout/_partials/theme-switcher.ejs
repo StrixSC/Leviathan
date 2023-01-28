@@ -1,8 +1,6 @@
-
 <div class="flex items-center justify-center">
     <button class="theme-switcher" type="button">
         <span class="text-black dark:text-white theme-switcher-icon material-symbols-outlined">
-            light_mode
         </span>
     </button>
 </div>
@@ -10,12 +8,26 @@
     const darkMode = "dark_mode";
     const lightMode = "light_mode";
 
-        let isDark = window.localStorage.getItem("isDark") || true;
+        let isDark;
+        const localStorageVal = window.localStorage.getItem("isDark");
+        if (localStorageVal) {
+            isDark = localStorageVal === "true" ? true : false;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            isDark = true;
+            window.localStorage.setItem("isDark", isDark);
+        }
+
+        $(".theme-switcher-icon").text(isDark ? lightMode : darkMode);
+        if (isDark) {
+            $(".html").addClass("dark");
+        } else {
+            $(".html").removeClass("dark");
+        }
+
     $(".theme-switcher").on('click', () => {
         isDark = !isDark;
         $(".theme-switcher-icon").text(isDark ? lightMode : darkMode);
         $(".html").toggleClass("dark");
         window.localStorage.setItem("isDark", isDark);
     });
-
 </script>

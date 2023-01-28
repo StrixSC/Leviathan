@@ -1,7 +1,7 @@
 <div class="w-full p-8 mx-auto text-white dark:text-white lg:p-0 lg:w-1/2">
        <div class="flex flex-col gap-6">
               <% page.posts.each(post=> { %>
-                     <div class="pb-2 border-b-2 border-1 border-neutral-900">
+                     <div class="pb-2 border-b-2 border-1 border-neutral-300 dark:border-neutral-900">
 
                             <div class="text-2xl font-bold text-black dark:text-white"><%- post.title %></div>
                             <div class="flex gap-2 text-lg font-light text-neutral-600">
@@ -21,8 +21,8 @@
                             <div class="mt-4 text-lg font-normal text-justify text-black dark:text-white">
                                    <%- post.excerpt %>
                             </div>
-                            <div class="my-4 text-lg font-normal ">
-                                   <a href="<%-url_for(post.link)%>">Read</a>
+                            <div class="my-4 text-lg font-normal">
+                                   <a class="text-black underline hover:text-blue-600 dark:text-white" href="<%-url_for(post.path)%>">Read</a>
                             </div>
                      </div>
                      <% }) %>
