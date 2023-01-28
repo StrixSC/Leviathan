@@ -6,7 +6,6 @@ github_url: https://github.com/StrixSC/
 mastodon_url: https://mastodon.social/explore
 linkedin_url: https://linkedin.com
 twitter_url: https://twitter.com/S7RIX
-
 accent_color: B0D9FF
 
 
@@ -18,13 +17,3 @@ sort_descending: true # Will sort blogposts in archive list starting with newest
 menu:
   Home: /
   Archive: /archives
- 
-  
-stylus:
-  compress: false
-  sourcemaps:
-    comment: true
-    inline: true
-    sourceRoot: ''
-    basePath: .
-  plugins: 'nib'
