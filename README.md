@@ -16,5 +16,8 @@ Run at the root of your hexo blog:
 git clone https://github.com/strixsc/leviathan.git themes/leviathan
 ```
 
-then setup a `_config.yml`  file that resembles the one provided in this repository, [here](https://github.com/StrixSC/Leviathan/blob/main/_config.yml).
+then modify the `_config.yml` file inside `themes/leviathan/` as shown [here](https://github.com/StrixSC/Leviathan/blob/main/_config.yml).
+
+Finally, modify the `/_config.yml` (root _config.yml) file to contain `theme: leviathan`.
+
 <hr>
