@@ -6,19 +6,20 @@
         return theme.sort_descending ? (b - a) : (a - b)
     });
     %>
-    <div class="border-l-[1px] border-solid border-white pl-8">
+    <div class="border-l-[1px] border-solid border-black dark:border-white pl-8">
         <% for(const year of keys) { %>
         <div class="pb-4 font-normal">
-            <p class="pb-4 text-3xl font-semibold "><%=year%></p>
+            <p class="pb-4 text-3xl font-semibold text-black dark:text-white">
+                <%=year%>
+            </p>
 
             <div class="flex flex-col gap-2 pl-10 align-middle">
                 <% archivePosts[year].forEach((post)=> { %>
                 <div class="flex flex-wrap w-full text-xl">
-                    <div class="pb-2 pr-8" <% if(theme.accent_color) {%> style="color: #<%=theme.accent_color%>" <%}%>
-                                        >
+                    <div class="pb-2 pr-8 text-black dark:text-white">
                                         <%- full_date(post.date, "MMM DD, YYYY" )%> </div>
 
-                        <a href="<%- url_for(post.path) %>" class="text-white hoverable-element">
+                        <a href="<%- url_for(post.path) %>" class="text-black dark:text-white hoverable-element">
                             <p class="block"><%=post.title%></p>
                         </a>
                     </div>
