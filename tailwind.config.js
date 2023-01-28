@@ -2,20 +2,21 @@ const typography = require('@tailwindcss/typography');
 const tham = require('tailwind-hamburgers');
 
 module.exports = {
+  darkMode: "class",
   theme: {
     fontFamily: {
-      'bungeehairline': ['Bungee Hairline'],
-      'sourcecode': ['Source Code Pro'], 
-    }
+      bungeehairline: ["Bungee Hairline"],
+      sourcecode: ["Source Code Pro"],
+    },
   },
-  typography: () =>  ({
+  typography: () => ({
     dark: {
-        css: {
-          pre: {
-            backgroundColor: "var(--codeblock_bg_color)",
-          }
-        }
-      }
+      css: {
+        pre: {
+          backgroundColor: "var(--codeblock_bg_color)",
+        },
+      },
+    },
   }),
   plugins: [typography, tham],
   corePlugins: {
@@ -27,12 +28,10 @@ module.exports = {
     resize: false,
   },
   variants: {
-    backgroundColor: ['responsive', 'DEFAULT', 'focus', 'hover'],
-    zIndex: ['responsive'],
-    margin: ['responsive'],
-    height: ['responsive'],
+    backgroundColor: ["responsive", "DEFAULT", "focus", "hover"],
+    zIndex: ["responsive"],
+    margin: ["responsive"],
+    height: ["responsive"],
   },
-  content: ['**/*.ejs'],
-
-
+  content: ["**/*.ejs"],
 };
